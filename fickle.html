@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="bn">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Fickle — মানব উন্নয়ন ও সহায়তা</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root{
+            --primary:#0b6efd;
+            --accent:#06b6d4;
+            --muted:#6b7280;
+            --bg:#f7fafc;
+            --card:#ffffff;
+            --radius:12px;
+        }
+        *{box-sizing:border-box}
+        body{font-family:'Poppins',system-ui,Segoe UI,Arial;margin:0;background:linear-gradient(180deg,#f8fbff 0%,var(--bg) 100%);color:#0f172a;line-height:1.45}
+        header{display:flex;align-items:center;justify-content:space-between;padding:18px 24px;background:rgba(255,255,255,0.7);backdrop-filter:blur(6px);position:sticky;top:0;z-index:40;border-bottom:1px solid #eef2ff}
+        .brand{display:flex;align-items:center;gap:12px}
+        .brand img{width:56px;height:56px;object-fit:cover;border-radius:10px;box-shadow:0 6px 18px rgba(11,105,253,0.12)}
+        .brand h1{margin:0;font-size:18px;letter-spacing:0.2px}
+        nav{display:flex;gap:14px;align-items:center}
+        nav a{color:var(--muted);text-decoration:none;padding:8px 10px;border-radius:8px;font-weight:600;font-size:14px}
+        nav a:hover{background:rgba(11,110,253,0.06);color:var(--primary)}
+        .container{max-width:1100px;margin:28px auto;padding:0 20px}
+        .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:22px;align-items:center}
+        .hero-card{background:var(--card);padding:28px;border-radius:var(--radius);box-shadow:0 10px 30px rgba(2,6,23,0.06)}
+        .hero h2{margin:0 0 10px;font-size:26px}
+        .hero p{margin:0;color:var(--muted)}
+        .cta{display:flex;gap:12px;margin-top:16px}
+        .btn{background:var(--primary);color:#fff;padding:10px 14px;border-radius:10px;border:0;cursor:pointer;font-weight:600}
+        .btn.secondary{background:#fff;color:var(--primary);border:1px solid rgba(11,110,253,0.12)}
+        .quick-stats{display:flex;gap:12px;margin-top:18px}
+        .stat{background:linear-gradient(180deg,#ffffff,#f8fbff);padding:12px;border-radius:10px;min-width:110px;text-align:center}
+        .stat b{display:block;font-size:18px}
+        /* Sections */
+        section{margin-top:24px}
+        .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+        @media(max-width:900px){.hero{grid-template-columns:1fr}.grid{grid-template-columns:repeat(2,1fr)}}
+        @media(max-width:600px){.grid{grid-template-columns:1fr}.nav-hidden{display:none}}
+        .card{background:var(--card);padding:16px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.04)}
+        .project-img{width:100%;height:160px;object-fit:cover;border-radius:8px}
+        .tag{display:inline-block;padding:6px 8px;background:rgba(6,182,212,0.12);color:var(--accent);border-radius:8px;font-weight:600;font-size:13px}
+        form{display:grid;gap:10px}
+        label{font-size:13px;color:var(--muted);font-weight:600}
+        input[type="text"],input[type="email"],textarea,select{padding:10px;border-radius:10px;border:1px solid #e6eefc;background:#fff;outline:none}
+        textarea{min-height:110px;resize:vertical}
+        .row{display:flex;gap:10px}
+        .row > *{flex:1}
+        .feedback-list{margin-top:12px;display:grid;gap:10px}
+        .feedback-item{padding:12px;border-radius:10px;background:linear-gradient(180deg,#ffffff,#fbfdff);border:1px solid #eef6ff}
+        footer{margin-top:28px;padding:22px;text-align:center;color:var(--muted);font-size:14px}
+        .muted{color:var(--muted)}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="brand">
+            <img src="fickle.jpg" alt="Fickle লোগো — fickle.jpg" />
+            <div>
+                <h1>Fickle</h1>
+                <div class="muted" style="font-size:13px">Good work be the foundation of the future</div>
+            </div>
+        </div>
+        <nav class="nav-hidden" aria-label="প্রধান নেভিগেশন">
+            <a href="#about">আমাদের সম্পর্কে</a>
+            <a href="#works">কর্মকাণ্ড</a>
+            <a href="#past">পূর্বে</a>
+            <a href="#future">ভবিষ্যৎ</a>
+            <a href="#contact">যোগাযোগ</a>
+            <a href="#opinion">মতামত</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <div class="hero-card">
+                <h2>Fickle — মানবতার সেবায় নিবেদিত</h2>
+                <p>গরিব ও অসহায় মানুষের পাশে দাঁড়িয়ে আমরা স্বাস্থ্য, শিক্ষা ও দুর্যোগে সহায়তা প্রদান করি। রক্ত গ্রুপ নির্ণয়, রক্ত সংগ্রহ এবং বৃত্তি পরীক্ষার মাধ্যমে ছাত্রছাত্রীদের সাহা্য্য করা আমাদের প্রধান কাজগুলোর মধ্যে রয়েছে।</p>
+                <div class="cta">
+                    <button class="btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">অভিযোগ/মতামত দিন</button>
+                    <a class="btn secondary" href="#past">কী কাজ করেছি</a>
+                </div>
+                <div class="quick-stats" aria-hidden="true">
+                    <div class="stat"><b>১২০+</b><small class="muted">রক্তদাতা</small></div>
+                    <div class="stat"><b>৮৫০+</b><small class="muted">সহায়তা</small></div>
+                    <div class="stat"><b>১৫+</b><small class="muted">শিক্ষা বৃত্তি</small></div>
+                </div>
+            </div>
+
+            <div class="card" style="display:flex;flex-direction:column;gap:12px;justify-content:center;align-items:center;text-align:center">
+                <img src="fickle-tame.jpg" alt="Fickle লোগো" style="width:100%;height:220px;object-fit:cover;border-radius:10px" />
+                <div>
+                    <div class="tag">সেবা ও সহায়তা</div>
+                    <p class="muted" style="margin:8px 0 0">আপনি যদি রক্তের প্রয়োজন সম্পর্কে তথ্য দিতে চান বা কোন কর্মসূচিতে অংশ নিতে চান, নিচের ফরমটি পূরণ করুন।</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <h3>আমাদের সম্পর্কে</h3>
+            <div class="card" style="margin-top:10px">
+                <p>Fickle একটি স্বল্পমেয়াদি এবং দীর্ঘমেয়াদি প্রকল্পের মাধ্যমে দরিদ্র ও অসহায় মানুষের উন্নয়নে কাজ করে। আমরা রক্তের গ্রুপ নির্ণয়, জরুরী রক্ত সংগ্রহ, স্বাস্থ্যকর্মী সমর্থন এবং ছাত্রছাত্রীদের জন্য বৃত্তি পরীক্ষার আয়োজন করে থাকি। আমাদের লক্ষ্য সমাজে শক্তি ও আত্মনির্ভরতা গড়ে তোলা।</p>
+            </div>
+        </section>
+
+        <section id="works">
+            <h3 style="margin-top:18px">কর্মকাণ্ড</h3>
+            <div class="grid" style="margin-top:10px">
+                <div class="card">
+                    <img class="project-img" src="fickle-past.jpg" alt="রক্তদান শিবির — past.jpg" onerror="this.style.opacity=0.6;this.alt="> 
+                    <img class="project-img" src="fickle-past1.jpg" alt="রক্তদান শিবির — past1.jpg" onerror="this.style.opacity=0.6;this.alt=">
+                    <img class="project-img" src="fickle-past2.jpg" alt="রক্তদান শিবির — past2.jpg" onerror="this.style.opacity=0.6;this.alt=">
+                    <img class="project-img" src="fickle-past3.jpg" alt="রক্তদান শিবির — past3.jpg" onerror="this.style.opacity=0.6;this.alt=">
+                    <h4 style="margin:8px 0 4px">রক্তদান শিবির</h4>
+                    <p class="muted">নিয়মিত রক্তদান শিবিরের মাধ্যমে জরুরী ক্ষেত্রে রক্ত সরবরাহ নিশ্চিত করা।</p>
+                </div>
+                <div class="card">
+                    <img class="project-img" src="past2.jpg" alt="বৃত্তি পরীক্ষা — past2.jpg" onerror="this.style.opacity=0.6;this.alt='ছবি পাওয়া যায়নি'">
+                    <h4 style="margin:8px 0 4px">শিক্ষা বৃত্তি পরীক্ষা</h4>
+                    <p class="muted">প্রতিভাবান ছাত্রছাত্রীদের জন্য বৃত্তি ও পরীক্ষা আয়োজন করে আমরা শিক্ষায় সহায়তা করি।</p>
+                </div>
+                <div class="card">
+                    <img class="project-img" src="past3.jpg" alt="সাহায্য বিতরণ — past3.jpg" onerror="this.style.opacity=0.6;this.alt='ছবি পাওয়া যায়নি'">
+                    <h4 style="margin:8px 0 4px">জরুরী সহায়তা বিতরণ</h4>
+                    <p class="muted">প্রাকৃতিক দুর্যোগ বা সামাজিক সংকটে তাত্ক্ষণিক সহায়তা প্রদান।</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="past">
+            <h3 style="margin-top:18px">পূর্বে আমরা যা করেছি</h3>
+            <div class="grid" style="margin-top:10px">
+                <!-- Add more cards or replace images with real ones -->
+                <div class="card"><img class="project-img" src="past4.jpg" alt="past4.jpg" onerror="this.style.opacity=0.6"><h4 style="margin:8px 0 4px">গ্রামভিত্তিক স্বাস্থ্য শিবির</h4><p class="muted">স্থানীয় জনগোষ্ঠীর জন্য বিনামূল্যে স্বাস্থ্য পরীক্ষা</p></div>
+                <div class="card"><img class="project-img" src="past5.jpg" alt="past5.jpg" onerror="this.style.opacity=0.6"><h4 style="margin:8px 0 4px">স্কলারশিপ প্রদায়ন</h4><p class="muted">অর্থ সহায়তা পেয়ে শিক্ষার পথ সুগম করা</p></div>
+                <div class="card"><img class="project-img" src="past6.jpg" alt="past6.jpg" onerror="this.style.opacity=0.6"><h4 style="margin:8px 0 4px">কমিউনিটি ওয়ার্কশপ</h4><p class="muted">দক্ষতা উন্নয়ন ও সচেতনতা কার্যক্রম</p></div>
+            </div>
+        </section>
+
+        <section id="future">
+            <h3 style="margin-top:18px">ভবিষ্যৎ পরিকল্পনা</h3>
+            <div class="grid" style="margin-top:10px">
+                <div class="card"><img class="project-img" src="future1.jpg" alt="future1.jpg" onerror="this.style.opacity=0.6"><h4 style="margin:8px 0 4px">আরও রক্তদান শিবির</h4><p class="muted">নিয়মিত আরও শিবির আয়োজন করে রক্তের জোগান বাড়ানো।</p></div>
+                <div class="card"><img class="project-img" src="future2.jpg" alt="future2.jpg" onerror="this.style.opacity=0.6"><h4 style="margin:8px 0 4px">স্কিল ডেভ-প্রোগ্রাম</h4><p class="muted">যুবসমাজের জন্য প্রযুক্তি ও দক্ষতা প্রশিক্ষণ।</p></div>
+                <div class="card"><img class="project-img" src="future3.jpg" alt="future3.jpg" onerror="this.style.opacity=0.6"><h4 style="margin:8px 0 4px">স্বাস্থ্য সচেতনতা অভিযান</h4><p class="muted">গ্রাম-শহর জুড়ে সচেতনতা বাড়ানো।</p></div>
+            </div>
+        </section>
+
+        <section id="future">
+            <h3 style="margin-top:18px">যোগাযোগ</h3>
+            <div class="grid" style="margin-top:10px">
+                <div class="card" style="width: 1060px;">
+                    <p style="margin:0;color:var(--bolt);font-size:15px">
+                    E-mail</E-mail>: <a href="mahadi.abir2008@gmail.com" class="links">mahadi.abir2008@gmail.com</a>
+                    <p style="margin:0;color:var(--bold);font-size:15px">
+                    Number</E-mail>: <a href="+8801609221481" class="links">+8801609221481</a>
+                    <p style="margin:0;color:var(--bold);font-size:15px">
+                    Facebook Page</E-mail>: <a href="+https://www.facebook.com/profile.php?id=61579095905309" class="links">https://www.facebook.com/profile.php?id=61579095905309</a>
+            </div>
+        </section>
+        
+
+        <section id="contact">
+            <h3 style="margin-top:18px">আপনার অভিযোগ / মতামত</h3>
+            <div class="card" style="margin-top:10px">
+                <form id="feedbackForm" onsubmit="return false" aria-label="অভিযোগ ও মতামত ফর্ম">
+                    <div class="row">
+                        <div>
+                            <label for="name">আপনার নাম</label>
+                            <input id="name" type="text" placeholder="নাম (বিকল্প)" />
+                        </div>
+                        <div>
+                            <label for="phone">মোবাইল (বিকল্প)</label>
+                            <input id="phone" type="text" placeholder="০১XXXXXXXXX" />
+                        </div>
+                    </div>
+                    <label for="email">ইমেইল (বিকল্প)</label>
+                    <input id="email" type="email" placeholder="আপনার ইমেইল" />
+                    <label for="category">বিষয়</label>
+                    <select id="category">
+                        <option>রক্ত প্রয়োজন</option>
+                        <option>সেবা সম্পর্কিত অভিযোগ</option>
+                        <option>অন্যান্য মতামত</option>
+                    </select>
+                    <label for="message">মন্তব্য / অভিযোগ</label>
+                    <textarea id="message" placeholder="আপনার কথা এখানে লিখুন..." required></textarea>
+                    <div style="display:flex;gap:10px;align-items:center;justify-content:space-between">
+                        <div class="muted" style="font-size:13px">আপনার তথ্য নিরাপদ রাখা হবে।</div>
+                        <div>
+                            <button class="btn" onclick="submitFeedback()">পাঠান</button>
+                        </div>
+                    </div>
+                </form>
+
+                <div id="response" style="margin-top:10px"></div>
+
+                <h4 style="margin-top:14px">সাম্প্রতিক জমা</h4>
+                <div id="feedbackList" class="feedback-list" aria-live="polite"></div>
+            </div>
+        </section>
+
+        <footer>
+            <div>© <strong>Fickle</strong> — মানব উন্নয়ন ও সামাজিক সহায়তা</div>
+            <div class="muted" style="margin-top:6px">ছবিগুলো প্রতিস্থাপনযোগ্য; প্রকল্পের বাস্তব চিত্র আপলোড করুন (ফাইল নাম: past1.jpg, future1.jpg ইত্যাদি)।</div>
+        </footer>
+    </main>
+
+    <script>
+        // Local storage feedback handler
+        const key = 'fickle_feedback_v1';
+        function loadFeedback(){
+            const data = JSON.parse(localStorage.getItem(key) || '[]');
+            const list = document.getElementById('feedbackList');
+            list.innerHTML = '';
+            if(!data.length){ list.innerHTML = '<div class="muted">কোনো ফিডব্যাক নেই — আপনি প্রথমটি দিন।</div>'; return; }
+            data.slice().reverse().forEach(item=>{
+                const d = document.createElement('div');
+                d.className = 'feedback-item';
+                d.innerHTML = '<div style="display:flex;justify-content:space-between;gap:8px"><strong>' + escapeHtml(item.category) + '</strong><small class="muted">' + new Date(item.time).toLocaleString() + '</small></div>'
+                    + '<div style="margin-top:6px;color:#0f172a">'+ escapeHtml(item.message) +'</div>'
+                    + '<div class="muted" style="margin-top:8px;font-size:13px">' + (item.name?escapeHtml(item.name):'অজানা') + (item.email?(' • '+escapeHtml(item.email)):'') + (item.phone?(' • '+escapeHtml(item.phone)):'') + '</div>';
+                list.appendChild(d);
+            });
+        }
+
+        function submitFeedback(){
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const category = document.getElementById('category').value;
+            const message = document.getElementById('message').value.trim();
+            const resp = document.getElementById('response');
+            resp.innerHTML = '';
+            if(!message){ resp.innerHTML = '<div class="muted" style="color:#b91c1c">মন্তব্য লিখুন (প্রয়োজনীয়)।</div>'; return; }
+            const entry = {name,phone,email,category,message,time:Date.now()};
+            const data = JSON.parse(localStorage.getItem(key) || '[]');
+            data.push(entry);
+            localStorage.setItem(key, JSON.stringify(data));
+            document.getElementById('feedbackForm').reset();
+            resp.innerHTML = '<div style="color:#064e3b">ধন্যবাদ! আপনার মতামত জমা হয়েছে।</div>';
+            loadFeedback();
+            // In production: send to server via fetch() to a backend / API endpoint
+        }
+
+        function escapeHtml(s){ return String(s).replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;'); }
+
+        // Initialize
+        loadFeedback();
+    </script>
+</body>
+</html></div>
